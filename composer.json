@@ -1,5 +1,5 @@
 {
-    "name": "visa-acceptance/acceptance-api-sdk",
+    "name": "visa-acceptance-apimatic/acceptance-api-sdk",
     "description": "Sample SDK for Acceptance by APIMatic",
     "type": "library",
     "keywords": [],

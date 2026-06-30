@@ -123,7 +123,7 @@ class VisaAcceptanceMergedSpecClient implements ConfigurationInterface
             ->converter(new CompatibilityConverter())
             ->jsonHelper(ApiHelper::getJsonHelper())
             ->apiCallback($this->config['httpCallback'] ?? null)
-            ->userAgent('PHP SDK, Version: 0.0.1, on OS {os-info}')
+            ->userAgent('PHP SDK, Version: 0.0.2, on OS {os-info}')
             ->serverUrls(self::ENVIRONMENT_MAP[$this->getEnvironment()], Server::DEFAULT_)
             ->authManagers(['BearerAuth' => $this->bearerAuthManager, 'Accept' => $this->acceptManager])
             ->loggingConfiguration($loggingConfiguration)
