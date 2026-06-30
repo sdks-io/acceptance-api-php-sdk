@@ -1,0 +1,44 @@
+
+# Processor Information 5
+
+*This model accepts additional fields of type array.*
+
+## Structure
+
+`ProcessorInformation5`
+
+## Fields
+
+| Name | Type | Tags | Description | Getter | Setter |
+|  --- | --- | --- | --- | --- | --- |
+| `preApprovalToken` | `?string` | Optional | Token received in original session service.<br><br>**Constraints**: *Maximum Length*: `60` | getPreApprovalToken(): ?string | setPreApprovalToken(?string preApprovalToken): void |
+| `authorizationOptions` | [`?AuthorizationOptions1`](../../doc/models/authorization-options-1.md) | Optional | - | getAuthorizationOptions(): ?AuthorizationOptions1 | setAuthorizationOptions(?AuthorizationOptions1 authorizationOptions): void |
+| `reversal` | [`?Reversal`](../../doc/models/reversal.md) | Optional | - | getReversal(): ?Reversal | setReversal(?Reversal reversal): void |
+| `additionalProperties` | `array<string, array>` | Optional | - | findAdditionalProperty(string key): array | additionalProperty(string key, array value): void |
+
+## Example
+
+```php
+use VisaAcceptanceMergedSpecLib\Models\Builders\ProcessorInformation5Builder;
+use VisaAcceptanceMergedSpecLib\Models\Builders\AuthorizationOptions1Builder;
+use VisaAcceptanceMergedSpecLib\ApiHelper;
+use VisaAcceptanceMergedSpecLib\Models\Builders\ReversalBuilder;
+
+$processorInformation5 = ProcessorInformation5Builder::init()
+    ->preApprovalToken('preApprovalToken2')
+    ->authorizationOptions(
+        AuthorizationOptions1Builder::init()
+            ->panReturnIndicator('panReturnIndicator8')
+            ->additionalProperty('exampleAdditionalProperty', ApiHelper::deserialize('{"key1":"val1","key2":"val2"}'))
+            ->build()
+    )
+    ->reversal(
+        ReversalBuilder::init()
+            ->preApprovalToken('preApprovalToken0')
+            ->additionalProperty('exampleAdditionalProperty', ApiHelper::deserialize('{"key1":"val1","key2":"val2"}'))
+            ->build()
+    )
+    ->additionalProperty('exampleAdditionalProperty', ApiHelper::deserialize('{"key1":"val1","key2":"val2"}'))
+    ->build();
+```
+

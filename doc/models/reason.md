@@ -1,0 +1,37 @@
+
+# Reason
+
+*This model accepts additional fields of type array.*
+
+## Enumeration
+
+`Reason`
+
+## Fields
+
+| Name |
+|  --- |
+| `INVALID_APIKEY` |
+| `INVALID_SHIPPING_INPUT_PARAMS` |
+| `CAPTURE_CONTEXT_INVALID` |
+| `CAPTURE_CONTEXT_EXPIRED` |
+| `SDK_XHR_ERROR` |
+| `UNIFIEDPAYMENTS_VALIDATION_PARAMS` |
+| `UNIFIEDPAYMENTS_VALIDATION_FIELDS` |
+| `UNIFIEDPAYMENT_PAYMENT_PARAMITERS` |
+| `CREATE_TOKEN_TIMEOUT` |
+| `CREATE_TOKEN_XHR_ERROR` |
+| `SHOW_LOAD_CONTAINER_SELECTOR` |
+| `SHOW_LOAD_INVALID_CONTAINER` |
+| `SHOW_TOKEN_TIMEOUT` |
+| `SHOW_TOKEN_XHR_ERROR` |
+| `SHOW_PAYMENT_TIMEOUT` |
+
+## Example
+
+```php
+use VisaAcceptanceMergedSpecLib\Models\Reason;
+
+$reason = Reason::SDK_XHR_ERROR;
+```
+
